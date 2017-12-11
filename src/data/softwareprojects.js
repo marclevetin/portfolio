@@ -7,4 +7,4 @@ const softwaredata = [
   {id: 6, project: 'Fizzbuzz without if/else', githubpath: 'fizzbuzz-without-if-else', liveurl: '#', description: 'TBD', category: 'TBD', keytech:[]}
 ]
 
-export default softwaredata
+export default softwaredata;

@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
 
+// components
+import SoftwareProject from '../components/SoftwareProject';
+
+// local data
+import softwaredata from '../data/softwareprojects';
+
 class Portfolio extends Component {
   render() {
+    let allSoftwareProjects = softwaredata.map(project => {
+      return (
+        <SoftwareProject
+          key = {project.id}
+          name = {project.project}
+          github = {project.githubpath}
+          live = {project.liveurl}
+        />
+      )
+    })
+
     return (
       <div>
         <h1>Software development</h1>
           <p>Here are some of my side projects.  See more on my Github account.</p>
           <ul>
-            <li>My Ukulele Info</li>
-            <li>Portsmouth Randomizer</li>
-            <li>Hangman</li>
-            <li>Psychic</li>
-            <li>Card flip</li>
-            <li>Ship It Saturday Hackathon</li>
+            {allSoftwareProjects}
           </ul>
 
         <h1>Product management</h1>

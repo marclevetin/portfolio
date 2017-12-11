@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Technology from '../components/Technology'
 
+// local data
 import technologiesdata from '../data/tech'
 
 class Technologies extends Component {
