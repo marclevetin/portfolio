@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Technology from '../components/Technology'
 
 class Technologies extends Component {
   render() {
@@ -6,6 +7,7 @@ class Technologies extends Component {
       <div>
         <p>Here's a list of technologies I've worked with:</p>
         <ul>
+          <Technology />
           <li>Ruby - https://www.ruby-lang.org/en/</li>
           <li>Ruby on Rails</li>
           <li>ERB (eRuby)</li>
