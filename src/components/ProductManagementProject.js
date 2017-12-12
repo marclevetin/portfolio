@@ -1,14 +1,14 @@
 import React from 'react';
 
 const ProductManagementProject = (props) => {
-  let githubURL = "https://github.com/marclevetin/" + props.github;
-
     return (
       <div>
         <li>
           <p>{props.name}</p>
-          <p><a href={githubURL} target="_blank">Source code</a></p>
-          <p><a href={props.live} target="_blank">See it live</a></p>
+          <p>Problem: {props.problem}</p>
+          <p>Solution: {props.solution}</p>
+          <p>Team: {props.team}</p>
+          <p>Results: {props.results}</p>
         </li>
       </div>
     )

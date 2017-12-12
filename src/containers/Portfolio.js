@@ -6,6 +6,7 @@ import ProductManagementProject from '../components/ProductManagementProject';
 
 // local data
 import softwaredata from '../data/softwareprojects';
+import pmprojectdata from '../data/pmprojects';
 
 class Portfolio extends Component {
   render() {
@@ -16,6 +17,20 @@ class Portfolio extends Component {
           name = {project.project}
           github = {project.githubpath}
           live = {project.liveurl}
+        />
+      )
+    })
+
+    let allPMProducts = pmprojectdata.map(project => {
+      return (
+        <ProductManagementProject
+          key = {project.id}
+          name = {project.project}
+          company = {project.company}
+          problem = {project.problem}
+          solution = {project.solution}
+          results = {project.results}
+          team = {project.team}
         />
       )
     })
@@ -31,12 +46,7 @@ class Portfolio extends Component {
         <h1>Product management</h1>
           <p>This is a sampling of my product management projects.</p>
           <ul>
-            <ProductManagementProject />
-            <li>Company financials</li>
-            <li>Cash flow statement</li>
-            <li>Automatic bank reconciliation</li>
-            <li>Overhaul support ticket system</li>
-            <li>Implement stronger passwords</li>
+            {allPMProducts}
           </ul>
       </div>
     )
