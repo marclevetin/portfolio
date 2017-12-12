@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // components
 import SoftwareProject from '../components/SoftwareProject';
+import ProductManagementProject from '../components/ProductManagementProject';
 
 // local data
 import softwaredata from '../data/softwareprojects';
@@ -30,6 +31,7 @@ class Portfolio extends Component {
         <h1>Product management</h1>
           <p>This is a sampling of my product management projects.</p>
           <ul>
+            <ProductManagementProject />
             <li>Company financials</li>
             <li>Cash flow statement</li>
             <li>Automatic bank reconciliation</li>
