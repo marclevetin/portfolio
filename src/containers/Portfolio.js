@@ -37,13 +37,14 @@ class Portfolio extends Component {
 
     return (
       <div>
-        <h1>Software development</h1>
+        <h1>Projects</h1>
+        <h2>Software development</h2>
           <p>Here are some of my side projects.  See more on my Github account.</p>
           <ul>
             {allSoftwareProjects}
           </ul>
 
-        <h1>Product management</h1>
+        <h2>Product management</h2>
           <p>This is a sampling of my product management projects.</p>
           <ul>
             {allPMProducts}

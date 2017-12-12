@@ -18,7 +18,7 @@ class Technologies extends Component {
     })
     return (
       <div>
-        <p>Here's a list of languages, frameworks, and libraries I've worked with:</p>
+        <h1>Tech I know</h1>
         <ul>
           {allTech}
         </ul>
