@@ -12,7 +12,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        Header<br />
+        <h1>Marc Levetin</h1>
+        <h2>I'm a full stack web developer.  Thanks for visiting.</h2>
         <Bio />
         <Portfolio />
         <Technologies />

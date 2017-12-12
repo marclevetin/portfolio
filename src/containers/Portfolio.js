@@ -1,28 +1,53 @@
 import React, { Component } from 'react';
 
+// components
+import SoftwareProject from '../components/SoftwareProject';
+import ProductManagementProject from '../components/ProductManagementProject';
+
+// local data
+import softwaredata from '../data/softwareprojects';
+import pmprojectdata from '../data/pmprojects';
+
 class Portfolio extends Component {
   render() {
+    let allSoftwareProjects = softwaredata.map(project => {
+      return (
+        <SoftwareProject
+          key = {project.id}
+          name = {project.project}
+          github = {project.githubpath}
+          live = {project.liveurl}
+        />
+      )
+    })
+
+    let allPMProducts = pmprojectdata.map(project => {
+      return (
+        <ProductManagementProject
+          key = {project.id}
+          name = {project.project}
+          company = {project.company}
+          problem = {project.problem}
+          solution = {project.solution}
+          results = {project.results}
+          team = {project.team}
+        />
+      )
+    })
+
     return (
       <div>
-        <h1>Software development</h1>
+        <h1>Projects</h1>
+        <h2>Software development</h2>
           <p>Here are some of my side projects.  See more on my Github account.</p>
           <ul>
-            <li>My Ukulele Info</li>
-            <li>Portsmouth Randomizer</li>
-            <li>Hangman</li>
-            <li>Psychic</li>
-            <li>Card flip</li>
-            <li>Ship It Saturday Hackathon</li>
+            {allSoftwareProjects}
           </ul>
 
-        <h1>Product management</h1>
+        <h2>Product management</h2>
           <p>This is a sampling of my product management projects.</p>
           <ul>
-            <li>Company financials</li>
-            <li>Cash flow statement</li>
-            <li>Automatic bank reconciliation</li>
-            <li>Overhaul support ticket system</li>
-            <li>Implement stronger passwords</li>
+            {allPMProducts}
           </ul>
       </div>
     )
